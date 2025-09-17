@@ -1,0 +1,31 @@
+{
+  "name": "sparkrock_task_ui",
+  "version": "1.0.0",
+  "description": "Playwright test automation framework for playwright.dev website using Page Object Model design pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "report": "npx playwright show-report reports/html-report",
+    "install:browsers": "npx playwright install",
+    "install:deps": "npx playwright install-deps"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "page-object-model",
+    "javascript",
+    "e2e"
+  ],
+  "author": "Test Automation Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "playwright": "^1.55.0"
+  }
+}

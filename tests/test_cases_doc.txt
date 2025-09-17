@@ -1,0 +1,27 @@
+1. Test Suite: Get Started Button Functionality
+
+a. Test Case Description: This test suite validates the **Get Started** button functionality on the Playwright website. It ensures that the primary call-to-action for new users works correctly and provides a smooth onboarding experience.
+
+b. Strategy
+- Verify "Get Started" button visibility and accessibility
+- Validate button click functionality and navigation
+- Confirm correct landing page and content
+- Test button behavior across different browsers
+
+c. Rationale
+The "Get Started" button is the main call-to-action on the homepage and the first step for new users to start using Playwright. A broken "Get Started" button can be a major roadblock for new users and can prevent them from adopting the tool.
+
+----------------------
+
+2. Test Suite: Search Functionality
+
+a. Test Case Description: This test suite validates the "Search Functionality" of the Playwright website. It ensures that the search feature is accessible, functional, and returns relevant results.
+
+b. Strategy
+- Verify search modal opens and closes correctly
+- Validate search input accepts user input
+- Confirm search returns relevant results
+
+
+c. Rationale
+The search feature helps users quickly find documentation, guides, and resources. Reliable search improves user experience and productivity.
