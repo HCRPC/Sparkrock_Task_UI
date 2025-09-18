@@ -1,27 +1,32 @@
-1. Test Suite: Get Started Button Functionality
+A. TEST CASE DESCRIPTION:
+   This section describes the features and functionalities of the Playwright website that will be tested.
 
-a. Test Case Description: This test suite validates the **Get Started** button functionality on the Playwright website. It ensures that the primary call-to-action for new users works correctly and provides a smooth onboarding experience.
+1.  Search Functionality: This test case will verify the search functionality of the website. It will ensure that the search bar is accessible, accepts user input, and returns relevant search results.
 
-b. Strategy
-- Verify "Get Started" button visibility and accessibility
-- Validate button click functionality and navigation
-- Confirm correct landing page and content
-- Test button behavior across different browsers
+2.  "Get Started" Button Functionality:This test case will focus on the "Get Started" button on the homepage. It will verify that the button is visible, clickable, and redirects the user to the correct installation and setup guide. This test ensures that the primary call-to-action for new users is functioning as expected.
 
-c. Rationale
-The "Get Started" button is the main call-to-action on the homepage and the first step for new users to start using Playwright. A broken "Get Started" button can be a major roadblock for new users and can prevent them from adopting the tool.
+------
 
-----------------------
+B. TEST STRATEGY:
+   This section outlines the strategy for testing the Playwright website.
 
-2. Test Suite: Search Functionality
+1.  Framework and Language: The testing framework will be built using Playwright with JavaScript. The Page Object Model (POM) design pattern will be implemented to create a scalable and maintainable test automation framework.
 
-a. Test Case Description: This test suite validates the "Search Functionality" of the Playwright website. It ensures that the search feature is accessible, functional, and returns relevant results.
+2.  Test Execution: Tests will be executed in a headless mode on multiple browsers (Chromium, Firefox) to ensure cross-browser compatibility. The tests will be run in parallel to reduce the overall execution time.
 
-b. Strategy
-- Verify search modal opens and closes correctly
-- Validate search input accepts user input
-- Confirm search returns relevant results
+3.  Reporting: A detailed HTML report will be generated after each test run. The report will include the test results, screenshots of failed tests, and video recordings of the test execution. This will help in quickly identifying and debugging the issues.
 
+4.  Continuous Integration (CI): The test suite will be integrated with a CI/CD pipeline (e.g., GitHub Actions) to automate the testing process. This will ensure that the tests are run automatically on every code change, providing quick feedback to the development team.
 
-c. Rationale
-The search feature helps users quickly find documentation, guides, and resources. Reliable search improves user experience and productivity.
+------
+
+C. RATIONALE:
+    This section justifies the choices made in the test strategy and design.
+
+ 1.  Prioritization of Test Cases:
+     *   Search Functionality: The search functionality is critical for users to find information on the website. A non-functional search can lead to a poor user experience and prevent users from accessing important documentation. Therefore, this test case is prioritized to ensure that users can easily find the information they need.
+     *   "Get Started" Button Functionality: The "Get Started" button is the main call-to-action on the homepage. It is the first step for new users to start using Playwright. A broken "Get Started" button can be a major roadblock for new users and can prevent them from adopting the tool. This test case is prioritized to ensure that new users have a smooth onboarding experience.
+
+ 2.  Choice of Framework and Design Pattern:
+     *   Playwright with JavaScript: Playwright is a modern and powerful test automation framework that provides a rich set of features for testing web applications. It supports multiple browsers, is easy to set up, and has excellent documentation. JavaScript is a popular and widely used language for web development, which makes it a good choice for writing test automation scripts.
+     *   Page Object Model (POM): The POM design pattern is a widely used and proven approach for creating scalable and maintainable test automation frameworks. It helps in reducing code duplication, improving code readability, and making the tests more robust. By using POM, we can create a framework that is easy to maintain and extend in the future.
