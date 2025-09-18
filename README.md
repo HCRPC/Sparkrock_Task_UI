@@ -25,6 +25,7 @@ playwright-automation-framework/
 ├── tests/
 │   ├── search-functionality.spec.js           # Search functionality tests
 │   └── get-started-button-functionality.spec.js # Get Started button tests
+    ├── test_cases_doc.txt      # Detailed test case descriptions
 ├── reports/
 │   ├── html-report/            # HTML test reports
 │   ├── screenshots/            # Test screenshots
