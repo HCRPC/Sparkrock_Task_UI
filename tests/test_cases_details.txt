@@ -1,3 +1,5 @@
+NOTE: ***** Please note that the video recording includes the test cases 1 and 2 of Search Functionality *****
+
 A. TEST CASE DESCRIPTION:
    This section describes the features and functionalities of the Playwright website that will be tested.
 
@@ -16,7 +18,7 @@ B. TEST STRATEGY:
 
 3.  Reporting: A detailed HTML report will be generated after each test run. The report will include the test results, screenshots of failed tests, and video recordings of the test execution. This will help in quickly identifying and debugging the issues.
 
-4.  Continuous Integration (CI): The test suite will be integrated with a CI/CD pipeline (e.g., GitHub Actions) to automate the testing process. This will ensure that the tests are run automatically on every code change, providing quick feedback to the development team.
+4.  Continuous Integration (CI): The test suite will be integrated with a CI/CD pipeline (e.g., GitHub Actions) to automate the testing process. This will ensure that the tests are run automatically daily base and on every code change , providing quick feedback to the development team.
 
 ------
 
@@ -30,3 +32,113 @@ C. RATIONALE:
  2.  Choice of Framework and Design Pattern:
      *   Playwright with JavaScript: Playwright is a modern and powerful test automation framework that provides a rich set of features for testing web applications. It supports multiple browsers, is easy to set up, and has excellent documentation. JavaScript is a popular and widely used language for web development, which makes it a good choice for writing test automation scripts.
      *   Page Object Model (POM): The POM design pattern is a widely used and proven approach for creating scalable and maintainable test automation frameworks. It helps in reducing code duplication, improving code readability, and making the tests more robust. By using POM, we can create a framework that is easy to maintain and extend in the future.
+
+     -----
+
+     TEST CASES:
+     Search Functionality Test Cases:
+
+     Test Case 1: Should open and close search modal correctly
+
+     Go to the home page.
+     Verify that the search button is visible.
+     Click the search button.
+     Verify that the search modal opens and is visible.
+     Verify that the search input is visible and focused.
+     Press the Escape key to close the search modal.
+     Verify that the search modal is closed.
+     ----
+     Test Case 2: Should accept search input and return relevant results
+
+     Go to the home page.
+     Open the search modal.
+     Type "test" into the search input.
+     Verify that the search input value is "test".
+     Wait for the results to load (2 seconds).
+     Verify that search results are listed (at least 1 result).
+     Verify that at least one result contains "test" or "testing".
+     Close the search modal.
+     ----
+     Test Case 3: Should show no results for invalid search input
+
+     Go to the home page.
+     Open the search modal.
+     Type a random string (e.g., "xyz123!@#") that is not expected to match any results.
+     Wait for the results to load (2 seconds).
+     Verify that no search results are listed.
+     Verify that a "No results for {string}" message is displayed (if applicable).
+     Close the search modal.
+     ----
+
+     Test Case 4: Should not accept empty search input
+
+     Go to the home page.
+     Open the search modal.
+     Leave the search input empty.
+     Wait for the results to load (2 seconds).
+     Verify that no search results are listed.
+     Verify that a prompt or message appears indicating that the input is required (if applicable).
+     Close the search modal.
+    ----
+
+    Test Case 5: Should handle special characters gracefully
+
+    Go to the home page.
+    Open the search modal.
+    Type special characters (e.g., "!@#$%^&*()") into the search input.
+    Wait for the results to load (2 seconds).
+    Verify that no search results are listed.
+    Verify that the application does not crash or show an error.
+    Close the search modal.
+   ----
+
+   Test Case 6: Should handle very long search input
+
+   Go to the home page.
+   Open the search modal.
+   Type a very long string (e.g., 500+ characters) into the search input.
+   Wait for the results to load (2 seconds).
+   Verify that the application does not crash or become unresponsive.
+   Verify that search results are listed or a "No results for" message is displayed.
+   Close the search modal.
+   ----
+
+   Test Case 7: Should trim leading and trailing spaces in search input
+
+   Go to the home page.
+   Open the search modal.
+   Type a valid search term with leading and trailing spaces (e.g., " test ") into the search input.
+   Wait for the results to load (2 seconds).
+   Verify that search results are listed as if the spaces were not present.
+   Close the search modal.
+
+   Get Started Button Functionality Test Cases:
+
+   Test Case 1: should verify Get Started button visibility and accessibility
+
+   Navigate to the home page.
+   Confirm the page loads correctly.
+   Check that the "Get Started" button is visible on the page.
+   Verify the button is clickable and has a valid href attribute.
+   Ensure the href contains "/docs".
+   Confirm the button is not disabled.
+   ----
+
+   Test Case 2: Should navigate to correct installation page when clicked
+
+   Navigate to the home page.
+   Click the "Get Started" button.
+   Confirm that you are redirected to the documentation or installation page.
+   Verify the URL contains "/docs".
+   -----
+
+   Test Case 3: Should provide consistent experience across browser back navigation
+
+   Navigate to the home page.
+   Click the "Get Started" button.
+   Confirm you are on the documentation page (URL contains "/docs").
+   Use the browser's back button to return to the home page.
+   Confirm you are back on the home page (URL matches the home page).
+   Check that the "Get Started" button is still visible and functional.
+   Click the "Get Started" button again.
+   Confirm you are redirected to the documentation page (URL contains "/docs").
